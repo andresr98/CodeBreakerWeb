@@ -1,0 +1,30 @@
+<div class="row">
+  <h1>Code Breaker</h1>
+</div>
+<div class="row">
+  <form >
+    <div class="row">
+      <div class="col-md-4">
+        <input type="text" name="code" placeholder="Ingrese el código" [(ngModel)]="code" required>
+      </div>
+      <div class="col-md-5 ml-3">
+        <input type="button" class="btn btn-primary" value="Guess" (click)="onGuess()">
+      </div>
+    </div>
+  </form>
+</div>
+  <hr>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col">
+      <label *ngIf="isResultReady">{{result}}</label>  
+    </div>    
+    <br>
+    <div class="col">
+      <label *ngIf="isResultReady"> {{message}}</label>
+    </div>    
+  </div>
+
+  
